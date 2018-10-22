@@ -10,24 +10,23 @@ namespace _2C2P.CardValidators.Validators
 
         public JCB(string cardNumber, int month, int year)
         {
-            bool response = false;
 
-            foreach (string num in _startsWith)
-            {
-                if (cardNumber.StartsWith(num))
-                    response = true;
-                else
-                {
-                    response = false;
-                    return;
-                }
-            }
-
-
-            if (response)
+            if (cardNumber.StartsWith("3528"))
             {
                 CardType = GetType().Name;
                 CardResult = Result.Valid;
+                return;
+            }
+            else if (cardNumber.StartsWith("3589"))
+            {
+                CardType = GetType().Name;
+                CardResult = Result.Valid;
+                return;
+            }
+            else
+            {
+                CardResult = Result.InValid;
+                return;
             }
         }
     }

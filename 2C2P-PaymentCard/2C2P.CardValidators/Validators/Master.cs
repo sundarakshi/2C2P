@@ -18,18 +18,19 @@ namespace _2C2P.CardValidators.Validators
             else
             {
                 CardResult = Result.InValid;
-                CardType = "UnKnown";
             }
+            return;
         }
 
 
         private bool CheckPrimeYear(int year)
         {
             int CurrentYear = DateTime.Today.Year;
-            int[] lstPrimeYears = { 2011, 2017, 2027, 2029, 2039, 2053 };
+            List<int> lstPrimeYears = new List<int>() { 2011, 2017, 2027, 2029, 2039, 2053 };
             if (year >= CurrentYear)
             {
-                return (lstPrimeYears.Equals(year));
+                var res = lstPrimeYears.Exists(x => x == year);
+                return res;
             
             }
             else

@@ -19,11 +19,8 @@ namespace _2C2P.CardValidators.Validators
             else
             {
                 CardResult = Result.InValid;
-                CardType = "UnKnown";
             }
-
-
-
+            
         }
 
         private bool CheckLeapYear(int Year)
