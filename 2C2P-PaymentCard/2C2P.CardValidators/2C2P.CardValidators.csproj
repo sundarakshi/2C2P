@@ -5,4 +5,8 @@
     <RootNamespace>_2C2P.CardValidators</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\2C2P.DAL\2C2P.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

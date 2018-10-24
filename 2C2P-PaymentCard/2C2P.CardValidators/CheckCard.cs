@@ -15,9 +15,9 @@ namespace _2C2P.CardValidators
             objLst.Add(new Master(cardNumber, month, year));
             objLst.Add(new JCB(cardNumber, month, year));
             objLst.Add(new Amex(cardNumber, month, year));
+            objLst.Add(new DBCard(cardNumber, month, year));
 
-
-            for(int i=0;i<objLst.Count;i++)
+            for (int i=0;i<objLst.Count;i++)
             {
                 if (objLst[i].CardType!=null)
                 {
